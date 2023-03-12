@@ -55,7 +55,7 @@ const Movie = (props) => {
                         </section>
                         
                         <section>
-                            <span className="m-2 btn btn-dark" onClick={() => favoriteClick()}>Favorite</span>
+                            {props.displayFavorites && <span className="m-2 btn btn-dark" onClick={() => favoriteClick()}>Favorite</span>}
                             <span className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete" onClick={() => deleteClick()}/></span>
                         </section>
                     </div>

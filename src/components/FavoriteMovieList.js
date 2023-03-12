@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 const FavoriteMovieList = (props) => {
     
-    
+   if (props.displayFavorites) 
     return (<div className="col-xs savedContainer">
         <h5>Favorite Movies</h5>
         {
@@ -20,10 +20,13 @@ const FavoriteMovieList = (props) => {
             })
         }
     </div>);
+
+    return (<></>);
 }
 
 const mapStateToProps = state => {
-    return {favorites: state.favoritesReducer.favorites
+    return {favorites: state.favoritesReducer.favorites,
+        displayFavorites: state.favoritesReducer.displayFavorites
     }
 }
 

@@ -5,7 +5,7 @@ export const TOGGLE_FAVORITES = "TOGGLE_FAVORITES";
 
 const initialState = {
     favorites: [],
-    displayFavorites: false
+    displayFavorites: true
 }
 
 export const favoritesReducer = (state = initialState, action) => {
